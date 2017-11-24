@@ -1,0 +1,25 @@
+<?php 
+$this->headTitle('الثانية إعدادي - الضوء'); 
+?>
+<h4 class="title">الثانية إعدادي - الضوء</h4>
+<table class="table table-striped table-hover">
+    <tr><th>ترتيب الدرس</th><th>الدرس</th><th>مدة الإنجاز</th></tr>
+    <?php 
+    foreach ($menuItems as $menuItem) {
+        echo $this->partial('college/optics/toc', ['menuItem'=>$menuItem]);
+    }
+    ?>
+</table>
+<h4 class="title">التجارب</h4>
+<table class="table table-striped table-hover">
+    <tr><th>تجربة</th><th>الأهداف</th></tr>
+    <tr><td>تبدد الضوء</td><td> إبراز تبدد الضوء الأبيض و تركيبه</td></tr>
+    <tr><td>-</td><td> تقديم مفهوم الضوء الأحادي اللون</td></tr>
+    <tr><td>انتشار الضوء</td><td> إبراز مختلف أوساط الانتشار، و الإنتشار المستقيمي للضوء</td></tr>
+    <tr><td>العدسة الرقيقة المجمعة</td><td> إبراز مميزات العدسة الرقيقة المجمعة</td></tr>
+    <tr><td>-</td><td> مقارنة قوتي عدستين رقيقتين مجمعتين</td></tr>
+    <tr><td>الصورة المحصلة بعدسة رقيقة مجمعة</td><td> تحديد مميزات الصورة المحصلة بواسطة عدسة رقيقة مجمعة(شروط كوص)</td></tr>
+    <tr><td>الأجهزة البصرية</td><td> تعرف مبدأ المكبرة</td></tr>
+    <tr><td>-</td><td> تعرف كيفية تكون الصورة داخل العين</td></tr>
+</table>
+

@@ -1,0 +1,23 @@
+<?php 
+$this->headTitle('الثانية إعدادي - المادة و البيئة'); 
+?>
+<h4 class="title">الثانية إعدادي - المادة و البيئة</h4>
+<table class="table table-striped table-hover">
+    <tr><th>ترتيب الدرس</th><th>الدرس</th><th>مدة الإنجاز</th></tr>
+    <?php 
+    foreach ($menuItems as $menuItem) {
+        echo $this->partial('college/matter2/toc', ['menuItem'=>$menuItem]);
+    }
+    ?>
+</table>
+<h4 class="title">التجارب</h4>
+<table class="table table-striped table-hover">
+    <tr><th>تجربة</th><th>الأهداف</th></tr>
+    <tr><td>بعض خصائص الهواء</td><td> إبراز بعض الخصائص الفيزيائية للهواء</td></tr>
+    <tr><td>الجزيئات و الذرات‬</td><td> استعمال النماذج الجزيئية لتجسيد الجزيئات <span dir="ltr">H<sub>2</sub></span> و <span dir="ltr">O<sub>2</sub></span> و <span dir="ltr">N<sub>2</sub></span> و <span dir="ltr">H<sub>2</sub>O</span> و <span dir="ltr">CO<sub>2</sub></span> و <span dir="ltr">C<sub>4</sub>H<sub>10</sub></span> و <span dir="ltr">CO</span></td></tr>
+    <tr><td>الإحتراقات‬</td><td>‬ تعرف نواتج احتراق كل من <span>الكربون</span> و <span>البوتان</span></td></tr>
+    <tr><td>-</td><td> التمييز بين الاحتراق الكامل و الاحتراق غير الكامل</td></tr>
+    <tr><td>التفاعل الكيميائي</td><td> تعرف مفهوم التفاعل الكيميائي</td></tr>
+    <tr><td>-</td><td>التحقق من انحفاظ الكتلة أثناء التفاعل الكيميائي</td></tr>
+</table>
+

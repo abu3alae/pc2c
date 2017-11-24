@@ -1,0 +1,22 @@
+<?php 
+$this->headTitle('الميكانيك - الثالثة إعدادي'); 
+?>
+<h4 class="title">الميكانيك - الثالثة إعدادي</h4>
+<table class="table table-striped table-hover">
+    <tr><th>ترتيب الدرس</th><th>الدرس</th><th>مدة الإنجاز</th></tr>
+    <?php 
+    foreach ($menuItems as $menuItem) {
+        echo $this->partial('college/mecanic/toc', ['menuItem'=>$menuItem]);
+    }
+    ?>
+</table>
+<h4 class="title">التجارب</h4>
+<table class="table table-striped table-hover">
+    <tr><th>تجربة</th><th>الأهداف</th></tr>
+    <tr><td>‫الحركة و السكون‬</td><td>‬ التمييز بين حركتي الإزاحة و الدوران</td></tr>
+    <tr><td>-</td><td>‫‬ تحديد طبيعة حركة (منتظمة، متسارعة، متباطئة)</td></tr>
+    <tr><td>مفهوم القوة</td><td> تحديد مميزات قوة</td></tr>
+    <tr><td>توازن جسم خاضع لقوتين‬</td><td> التوصل إلى شرط التوازن</td></tr>
+    <tr><td>الوزن و الكتلة</td><td> التوصل إلى العلاقة <span>P = m x g</span></td></tr>
+</table>
+

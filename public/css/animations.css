@@ -1,0 +1,6 @@
+/* Animations */
+@keyframes clin {
+    to {
+        text-shadow: -1px 0 5px #aaf, 0 -1px 5px #aaf, 1px 0 5px #aaf, 0 1px 5px #aaf;
+    }    
+}

@@ -1,0 +1,117 @@
+<?= $this->doctype() ?>
+
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('PC in 2 Cycles')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])            
+            ->prependStylesheet($this->basePath('css/animations.css'))
+            ->prependStylesheet($this->basePath('css/classes.css'))
+            ->prependStylesheet($this->basePath('css/style.css'))
+            ->prependStylesheet($this->basePath('css/fonts.css'))
+            ->prependStylesheet($this->basePath('css/root.css'))
+            ->prependStylesheet($this->basePath('css/r0.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ?>
+        
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('js/dateHijGe.js'))
+            ->prependFile($this->basePath('js/async.js'))
+            ->prependFile($this->basePath('js/jscript.js'))
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-2.2.4.min.js'))
+        ?>
+    </head>
+    <body onload ='geoAr(); hijri(-1);'>
+        <header class="row">
+            <div class="col-md-1">
+                <img src="<?= $this->basePath('img/logo.png') ?>" class="img-responsive"/>
+            </div>
+            <div class="col-md-8">
+                <h3>الفيزياء و الكيمياء بالسلكين الإعدادي و الثانوي</h3>
+            </div>
+	    <div class="col-md-3">
+                <div class="row"><p><span id='hijri'></span> / <span id='miladi'></span></p></div>
+                <div class="row log">
+                    <!-- Navigation bar -->
+                    <?php
+                    // Render the login navbar
+                    echo $this->loginNav()->render();
+                    ?>
+                </div>
+            </div>
+        </header>
+        <!-- Navigation bar -->
+        <nav class="row" id="tofixed">
+            <!-- Navigation bar -->
+            <?php
+            // Check if the activeMenuItemId passed to layout view model
+            // and if so, use it for setting active navbar item.
+            if (isset($activeMenuItemId)) {
+                $this->mainMenu()->setActiveItemId($activeMenuItemId);
+            }
+
+            // Render the navbar
+            echo $this->mainMenu()->render();
+            ?>
+        </nav>
+        <div class="container">
+            <div class="col-md-12">
+                <!-- Breadcrumbs -->
+                <?= $this->pageBreadcrumbs()->render(); ?>
+            </div>
+        </div>
+        <div class="container">
+            <?= $this->content ?>
+        </div>
+        <footer class="row">
+            <div class="col-md-3">
+                <img src="<?= $this->basePath('img/logo.png') ?>" class="img-responsive"/>
+                <address>
+                    <strong>تطوير و تصميم: 4EDUC</strong><br>
+                    رقم 48 تجزئة الشهدية 2 المنصور، مكناس<br>
+                    abu3alae@gmail.com <br>
+                    الهاتف: <span dir="ltr">(+212) 6 63-83-86-69</span>
+                </address>
+            </div>
+            <div class="col-md-3">
+                <h5>المذكرات و التوجيهات الرسمية</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">إعدادي</a></li>
+                    <li><a href="#">جذع مشترك</a></li>
+                    <li><a href="#">1 باك</a></li>
+                    <li><a href="#">2 باك</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>تحميل</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">دروس</a></li>
+                    <li><a href="#">تمارين</a></li>
+                    <li><a href="#">فروض</a></li>
+                    <li><a href="#">امتحانات</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>للتواصل معنا</h5>
+                <ul class="list-unstyled">
+                    <li><a target="_blink" href="#">قناتنا على اليوتوب</a></li>
+                    <li><a target="_blink" href="#">فيسبوك</a></li>
+                    <li><a target="_blink" href="#">تويتر</a></li>
+                    <li><a href="<?= $this->url('contactus'); ?>">مراسلتنا</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

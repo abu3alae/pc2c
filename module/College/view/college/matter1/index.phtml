@@ -1,0 +1,24 @@
+<?php 
+$this->headTitle('الأولى إعدادي - المادة و البيئة'); 
+?>
+<h4 class="title">الأولى إعدادي - المادة و البيئة</h4>
+<table class="table table-striped table-hover">
+    <tr><th>ترتيب الدرس</th><th>الدرس</th><th>مدة الإنجاز</th></tr>
+    <?php 
+    foreach ($menuItems as $menuItem) {
+        echo $this->partial('college/matter1/toc', ['menuItem'=>$menuItem]);
+    }
+    ?>
+</table>
+<h4 class="title">التجارب</h4>
+<table class="table table-striped table-hover">
+    <tr><th>تجربة</th><th>الأهداف</th></tr>
+    <tr><td>الحجم</td><td>قياس أحجام أجسام (صلبة-سائلة) باستعمال مخبار مدرج</td></tr>
+    <tr><td>الكتلة</td><td>قياس كتل أجسام (صلبة-سائلة) باستعمال ميزان</td></tr>
+    <tr><td>انحفاظ الكتلة و عدم انحفاظ الحجم</td><td>إبراز انحفاظ الكتلة خلال تحول فيزيائي</td></tr>
+    <tr><td>-</td><td>إبراز عدم انحفاظ الحجم خلال تحول فيزيائي</td></tr>
+    <tr><td>الكتلة الحجمية</td><td>تحديد الكتلة الحجمية لأجسام صلبة و سائلة</td></tr>
+    <tr><td>فصل مكونات خليط</td><td>إنجازتقنيات فصل مكونات خليط متجانس و غير متجانس</td></tr>
+    <tr><td>الجسم الخالص</td><td>تحديد مميزات جسم خالص</td></tr>
+</table>
+

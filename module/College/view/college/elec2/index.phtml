@@ -1,0 +1,20 @@
+<?php 
+$this->headTitle('الثانية إعدادي - الكهرباء'); 
+?>
+<h4 class="title">الثانية إعدادي - الكهرباء</h4>
+<table class="table table-striped table-hover">
+    <tr><th>ترتيب الدرس</th><th>الدرس</th><th>مدة الإنجاز</th></tr>
+    <?php 
+    foreach ($menuItems as $menuItem) {
+        echo $this->partial('college/elec2/toc', ['menuItem'=>$menuItem]);
+    }
+    ?>
+</table>
+<h4 class="title">التجارب</h4>
+<table class="table table-striped table-hover">
+    <tr><th>تجربة</th><th>الأهداف</th></tr>
+    <tr><td>التيار الكهربائي المتناوب الجيبي</td><td> معاينة توتر جيبي باستعمال راسم التذبذب</td></tr>
+    <tr><td>-</td><td> بحديد خاصيات توتر متناوب جيبي</td></tr>
+    <tr><td>التركيب الكهربائي المنزلي</td><td>‬ تحديد خاصيات التركيب الكهربائي أحادي الطور</td></tr>
+</table>
+

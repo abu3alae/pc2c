@@ -1,0 +1,77 @@
+<?php
+$this->headTitle('تعديل بيانات العضو');
+
+$this->mainMenu()->setActiveItemId('users');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'=>$this->url('home'),
+            'Manage Users'=>$this->url('users'),
+            'Edit User'=>$this->url('users', ['action'=>'edit', 'id'=>$user->getId()])
+            ]);
+
+$form->get('email')->setAttributes([
+    'class'=>'form-control', 
+    'placeholder'=>'name@example.com',
+    'dir' => 'ltr'
+    ]);
+
+$form->get('full_name')->setAttributes([
+    'class'=>'form-control', 
+    'placeholder'=>'Mhamed Mrini',
+    'dir' => 'ltr'
+    ]);
+
+$form->get('username')->setAttributes([
+    'class'=>'form-control', 
+    'placeholder'=>'abu3alae',
+    'dir' => 'ltr'
+    ]);
+
+$form->get('status')->setAttributes([
+    'class'=>'form-control',
+    'dir' => 'ltr'
+    ]);
+
+$form->get('submit')
+        ->setAttributes(['class'=>'btn btn-primary'])
+        ->setValue('تعديل');
+
+$form->prepare();
+?>
+
+<h3>تعديل بيانات العضو  <?= $this->escapeHtml($user->getEmail()) ?></h3>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <?= $this->form()->openTag($form); ?>
+        
+        <div class="form-group">
+            <?= $this->formLabel($form->get('email')); ?>
+            <?= $this->formElement($form->get('email')); ?>
+            <?= $this->formElementErrors($form->get('email')); ?>                  
+        </div>
+        
+        <div class="form-group">
+            <?= $this->formLabel($form->get('full_name')); ?>
+            <?= $this->formElement($form->get('full_name')); ?>
+            <?= $this->formElementErrors($form->get('full_name')); ?>                  
+        </div>
+        
+        <div class="form-group">
+            <?= $this->formLabel($form->get('username')); ?>
+            <?= $this->formElement($form->get('username')); ?>
+            <?= $this->formElementErrors($form->get('username')); ?>                  
+        </div>
+        
+        <div class="form-group">
+            <?= $this->formLabel($form->get('status')); ?>
+            <?= $this->formElement($form->get('status')); ?>
+            <?= $this->formElementErrors($form->get('status')); ?>                  
+        </div>
+        
+        <?= $this->formElement($form->get('submit')); ?>
+        
+        <?= $this->form()->closeTag(); ?>
+    </div>    
+</div>   
+

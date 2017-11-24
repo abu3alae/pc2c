@@ -1,0 +1,307 @@
+/* ################################### */
+/* = Header                            */
+/* ################################### */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 50px;
+    
+}
+header > div {
+    height: 50px;
+}
+header > div h3 {
+    color: red;
+    line-height: 50px;
+}
+header > div img {
+}
+header > div:nth-child(3) {
+}
+header > div > div p span {
+    color: orangered;
+    text-shadow: 0 0 1px black;
+}
+header > div > div, header > div > div p {
+    text-align: center;
+    line-height: 25px;
+}
+header > div:last-child > div {
+    height: 25px;
+}
+.log {
+    position: relative;
+}
+.log > button {
+    background: #bbb;
+    line-height: 12px;
+    border-radius: 5px 5px 0 0;
+    color: black;
+}
+.log > button:hover {
+    background: #000;
+    color: white;
+    text-shadow: -1px 0 0 blue, 0 -1px 0 blue, 1px 0 0 blue, 0 1px 0 blue;
+}
+.login {
+    position: absolute;
+    z-index: 1000;
+    background: #555;
+    padding: 20px 20px 10px;
+    box-shadow: 0 0 5px #ccc;
+    width: 100%;
+}
+.log a {
+    color: white;
+    text-shadow: -1px 0 0 blue, 0 -1px 0 blue, 1px 0 0 blue, 0 1px 0 blue;
+}
+label[for="remember-me"] {
+    color: white;
+}
+/* ################################### */
+/* = Nav                               */
+/* ################################### */
+nav {
+    background: #bbb;
+    position: relative;
+    z-index: 99;
+}
+form input[name^="captcha"] {
+    border: 1px solid #ccc;
+    width: 100%; height: 30px; line-height: 1.5;
+    border-radius: 3px;
+}
+.tofixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* css instuctions for elements id = bloc1 */
+#bloc1 {
+    width: 90%;
+    margin: 0 auto;
+    height: 35px;
+    background: #555;
+    z-index: 9999;
+}
+#bloc1 > li {
+    float: right;
+    height: 35px;
+    text-align: center;
+}
+#bloc1 > li:first-child {
+    width: 50px;
+    
+}
+#bloc1 > li:not(:first-child) {
+    width: calc((100% - 50px) / 4);
+}
+#bloc1 > li:hover {
+    box-shadow: 0 0 1px black;
+}
+#bloc1 > li > h3 {
+    text-align: center;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+}
+#bloc1 > li:hover h3 {
+    text-shadow: -1px 0 0 black, 0 -1px 0 black, 1px 0 0 black, 0 1px 0 black;
+}
+#bloc1 > li:nth-child(2):hover {
+    background-color: lightskyblue;
+}
+#bloc1 > li:nth-child(3):hover {
+    background-color: #77f;
+}
+#bloc1 > li:nth-child(4):hover {
+    background-color: #aaf;
+}
+#bloc1 > li:nth-child(5):hover {
+    background-color: lime;
+}
+/* end css instructions for elements id = bloc1 */
+/* css instuctions for elements id = bloc2 */
+#bloc2 {
+    visibility: hidden;
+    position: absolute;
+    top: 35px; right: 5%; left:0;
+    width: 90%;
+    height: 5px; 
+    background-color: #ddd;
+    z-index: 9999;
+    transition: all .25s ease;
+}
+#bloc2 > li {
+    width: calc(100% / 3);
+    height: 50px;
+}
+#bloc2 > li > h4 {
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    text-shadow: -1px 0 0 white, 0 -1px 0 white, 1px 0 0 white, 0 1px 0 white;
+}
+#bloc2 > li:hover h4 {
+    color: white;
+    text-shadow: -1px 0 0 black, 0 -1px 0 black, 1px 0 0 black, 0 1px 0 black;
+}
+#bloc1 li:nth-child(2):hover #bloc2, #bloc1 li:nth-child(3):hover #bloc2,
+#bloc1 li:nth-child(4):hover #bloc2 {
+    visibility: visible;
+    height: calc(3 * 60px);   
+}
+#bloc1 li:nth-child(5):hover #bloc2 {
+    visibility: visible;
+    height: calc(4 * 60px);   
+}
+#bloc1 > li:nth-child(2) #bloc2 > li:hover {
+    background-color: lightskyblue;
+}
+#bloc1 > li:nth-child(3) #bloc2 > li:hover {
+    background-color: #77f;
+}
+#bloc1 > li:nth-child(4) #bloc2 > li:hover {
+    background-color: #aaf;
+}
+#bloc1 > li:nth-child(5) #bloc2 > li:hover {
+    background-color: lime;
+}
+/* #bloc2 ---> #bloc3 */
+#bloc3 {
+    position: absolute;
+    top: 0; right: calc(100% / 3); bottom: 0; left:0;
+    width: calc(100% / 3);
+}
+#bloc3 > li {
+    height: 60px;
+}
+#bloc3 > li > a {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 15px;
+    font-family: 'Lhlamar';
+    font-size: 1.1em;
+    color: black;
+}
+#bloc3 > li > a:hover {
+    color: white;
+}
+#bloc1 > li:hover #bloc2:not(:hover) > li:first-child #bloc3 {
+    display: block;
+}
+#bloc1 > li:nth-child(2) #bloc2:not(:hover) > li:first-child {
+    background-color: lightskyblue;
+}
+#bloc1 > li:nth-child(3) #bloc2:not(:hover) > li:first-child {
+    background-color: #77f;
+}
+#bloc1 > li:nth-child(4) #bloc2:not(:hover) > li:first-child {
+    background-color: #aaf;
+}
+#bloc1 > li:nth-child(5) #bloc2:not(:hover) > li:first-child {
+    background-color: lime;
+}
+#bloc2 > li:not(:hover) #bloc3 {
+    display: none;
+}
+#bloc1 > li:nth-child(2) #bloc2 #bloc3 {
+    background-color: lightskyblue;
+}
+#bloc1 > li:nth-child(3) #bloc2 #bloc3 {
+    background-color: #77f;
+}
+#bloc1 > li:nth-child(4) #bloc2 #bloc3 {
+    background-color: #aaf;
+}
+#bloc1 > li:nth-child(5) #bloc2 #bloc3 {
+    background-color: lime;
+}
+/* #bloc2 ---> figure */
+#bloc2 figure {
+    position: absolute;
+    top: 0; right: calc(2 * 100% / 3); bottom: 0; left:0;
+    width: calc(100% / 3);
+}
+#bloc2 > li:not(:hover) > figure {
+    display: none;
+}
+#bloc2 > figure {
+    width: 100%;
+    height: 100%;
+}
+#bloc2 figure img {
+    width: 100%;
+    height: 100%;
+}
+/* end css instructions for elements id = bloc2 */
+/* ################################### */
+/* = Container                         */
+/* ################################### */
+.container {
+    padding: 5px;
+}
+.breadcrumb {
+    background-color: #ddd;
+}
+.container ul h3 {
+    margin-top: 10px;
+    color: green;
+    padding: 10px;
+    text-align: center;
+}
+.title {
+    color: red;
+    padding: 10px;
+}
+form ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 5px;
+}
+form ul li {
+    color: red;
+}
+/* ################################### */
+/* = Footer                            */
+/* ################################### */
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px; 
+    z-index: 0;
+    background: #333;
+}
+footer > div {
+    padding: 10px;
+    text-align: center;
+}
+footer > div:not(:last-child) {
+    border-left: 1px dashed #ddd;
+}
+footer > div h5 {
+    text-shadow: -1px 0 0 #ddd, 0 -1px 0 #ddd, 1px 0 0 #ddd, 0 1px 0 #ddd;
+}
+footer > div ul {
+    margin-top: 5px; padding-top: 5px;
+}
+footer address {
+    color: gray;
+}
+footer a {
+    color: gray;
+}
+footer a:hover {
+    color: white;
+}
+footer span {
+    color: #ddd;
+}
+footer img {
+    display: inline-block;
+    margin: 0 auto 10px;
+}

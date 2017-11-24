@@ -1,0 +1,18 @@
+               
+                
+                    <button type="button" class="btn btn-info" data-toggle="collapse" 
+                            data-target="#demo">تسجيل الدخول</button>
+                    <div id="demo" class="collapse login">
+                        <form class="form-signin">
+                            <label for="inputEmail" class="sr-only">Email address</label>
+                            <input dir="ltr" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input dir="ltr" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label for="remember-me"> اتصال لفترة أطول</label>
+                                <input type="checkbox" id="remember-me" value="remember-me">
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">دخول</button>
+                        </form>
+                        <a href="<?= $this->url('registration', ['action'=>'index']); ?>">حساب جديد</a>
+                    </div>

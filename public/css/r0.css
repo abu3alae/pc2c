@@ -1,0 +1,56 @@
+/* Soft Reset */
+html, body, div, p, ul, li, ol, dl, blockquote, form, h1, h2, h3, h4, h5, h6, code, kbd, q, code, pre, extarea, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, footer, nav, section, side, article, figure, figcaption {
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img, table, blockquote, code, pre, textarea, input, object, embed, video, audio {
+    max-width: 100%; max-height: 100%;
+    border: 0;
+}
+a, a:hover {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    /*overflow: hidden;
+    word-wrap: break-word;
+    text-align: justify;
+    text-align-last: right;
+    text-overflow: '...إلخ';
+    overflow-wrap: +;
+    -moz-hyphens: &shy;
+    white-space: nowrap;*/
+    font-family: 'Lhlamar';
+    text-align: justify;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amjad';
+}
+
+/*a[href$="pdf"] {
+    display: inline-block;
+    margin: .3em;
+    width: 12em;
+    height: 15em;
+    text-align: center;
+    background: url('../images/pdf_icon.png') center center no-repeat;
+    background-size: 50% 50%;
+}*/
+th, td {
+    text-align: center;
+}
+th {
+   background-color: #bbb;
+}
+
+
+

@@ -1,0 +1,25 @@
+/* fonts */
+@font-face {
+    font-family: 'Amjad';
+    src: url('../fonts/amjad.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gaza';
+    src: url('../fonts/gaza.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jannat';
+    src: url('../fonts/jannat.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lhlamar';
+    src: url('../fonts/lhlamar.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

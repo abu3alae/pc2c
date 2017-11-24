@@ -1,0 +1,8 @@
+
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width="60" height="60">
+    <polyline points="5,30 30,5 55,30" stroke="#bbf" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <polyline points="10,25 10,55 50,55 50,25" stroke="#bbf" stroke-width="1.5" fill="none"/>
+    <polyline points="15,55 15,35 25,35 25,55" stroke="#bbf" fill="none"/>
+    <polygon points="15,55 20,50 20,35 15,35" stroke="#bbf" fill="#ddd"/>
+    <rect x="30" y="30" width="15" height="10" stroke="#bbf" fill="rgba(0,0,255,.05)"/>
+</svg>

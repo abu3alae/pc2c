@@ -1,0 +1,18 @@
+<?php
+$this->headTitle('التسجيل - مراجعة المعلومات');
+
+$this->mainMenu()->setActiveItemId('home');
+
+$this->pageBreadcrumbs()->setItems([
+            'الصفحة الرئيسية'=>$this->url('home'),
+            'التسجيل' => $this->url('registration')
+            ]);
+?>
+
+<h1>التسجيل - مراجعة المعلومات</h1>
+
+<p>شكرا! راجع المعلومات التي أدخلت في المراحل السابقة.</p>
+
+<pre dir='ltr'>
+<?php print_r($userChoices); ?>
+</pre>
